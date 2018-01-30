@@ -5,5 +5,7 @@ This program is capable of handling several inputs of different types and styles
     Descripton: Here there should be no output as there was no input string/arguement
 
 2)  Input: ./stringsorter ""
-    Output
+    Output:
+    Description: Here there should be no output as there was no input string/arguement
+    
 
