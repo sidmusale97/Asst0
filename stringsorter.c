@@ -29,6 +29,7 @@ int main(int argc, char* argv[])
 	else if (argc > 2)
 	{
 		puts("Error too many inputs");
+		return 0;
 	}
 	char * longString = argv[1]; //input string is the second element in argv
 	if (strlen(longString) == 0)//if empty input string print empty output string
