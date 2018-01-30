@@ -5,10 +5,25 @@ This program is capable of handling several inputs of different types and styles
     Descripton: Here there should be no output as there was no input string/arguement
 
 2)  Input: ./stringsorter ""
+    Output
+
+
+3)  Input: ./stringsorter “1111thing”
     Output:
-    Description: Here there should be no output as there was no input string/arguement
-    
+    Sorted List:
+    thing
+    Description: I tested this input because I only added delimiters in the beginning
 
+4)  Input: ./stringsorter “thing12345”
+    Output:
+    Sorted List:
+    thing
+    Description: By having various delimiters at the end, the output shows the arguments being passed
 
-3)  Input:
+5)  Input: ./stringsorter “12thing:,.;boss098”
+    Output:
+    Sorted List:
+    boss
+    thing
+    Description: By testing this, we are ensuring that delimiters in the beginning, middle, and end are evaluated correctly.
 
