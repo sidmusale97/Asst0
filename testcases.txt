@@ -1,1 +1,8 @@
-hello assignment0
+This program is capable of handling several inputs of different types and styles. The expected input and output for this are shown below.
+------------------------------------------------------------------------------------------------------------------------------------------
+1)  Input: ./stringsorter
+    Output: 
+    Descripton: Here there should be no output as there was no input string/arguement
+
+2)  Input: ./stringsorter ""
+    Output
