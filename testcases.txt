@@ -7,3 +7,6 @@ This program is capable of handling several inputs of different types and styles
 2)  Input: ./stringsorter ""
     Output
 
+
+3)  Input:
+
