@@ -27,3 +27,13 @@ This program is capable of handling several inputs of different types and styles
     thing
     Description: By testing this, we are ensuring that delimiters in the beginning, middle, and end are evaluated correctly.
 
+
+8)  Input: ./stringsorter "121212A.....a....Cat___bat*****cOol!!!!dog"
+    Output: Sorted List: 
+            A
+            Cat
+            a
+            bat
+            cOol
+            dog
+    Description: This shows that the program can handle multiple delimeters and capitals along with lowercase and still sort them in                    the correct order.
