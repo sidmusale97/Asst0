@@ -27,3 +27,7 @@ This program is capable of handling several inputs of different types and styles
     thing
     Description: By testing this, we are ensuring that delimiters in the beginning, middle, and end are evaluated correctly.
 
+6)  Input: ./ss "234098;'[./"
+    Output: 
+    Sorted List:
+    Description: If the input has only delimiters, it returns nothing because there are no words being passed.
