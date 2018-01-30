@@ -17,16 +17,15 @@ void fillDels(char delims[], char * longString);
 int allUsed(int used[]);
 int main(int argc, char* argv[])
 {
-	if (argc > 2)
+	if (argc > 2)	//if more than 1 argument then return error
 	{
 		puts("Error too many inputs");
-		return 0;
+		return -1;
 	}
-	char * longString = argv[1];
+	char * longString = argv[1]; //input string is the second element in argv
     if (strlen(longString) == 0)puts(""); //if empty input string print empty output string
     makeSpaces(longString);
-    char delims[1] = " ";   //create char array delims of the same size as the number of non letters in the string
-    //fillDels(delims, longString);   //fill the delims array with all nonletters
+    char delims[1] = " ";   //create char array delims with just the space
     char * token=strtok(longString, delims);    //initiate string tokenizer by setting it equal to the first token in the string
     wordNode * head = NULL; //set first node to null
     numTokens = 0;          //this counts the number of "words" in the string
@@ -124,25 +123,11 @@ void makeSpaces(char * longString)
 
     while (longString[charind] != '\0')//while the character does not equal the string terminating character
     {
-        if (!isalpha(longString[charind]))longString[charind] = ' ';
+        if (!isalpha(longString[charind]))longString[charind] = ' ';//if non letter found replace it with a space
         charind++;
     }
 }
 
-void fillDels(char delims[], char * longString)//fill the delimiters array with the nonletters from string
-{
-    int charind = 0;
-    int counter = 0;
-    while (longString[charind] != '\0')//while character doesn't equal the null terminating character
-    {
-        if (!isalpha(longString[charind]))//if nonletter found
-            {
-                delims[counter] = longString[charind];//add it into the delimiter array
-                counter++;
-            }
-            charind++;
-    }
-}
 int allUsed(int used[])
 {
     int i;
