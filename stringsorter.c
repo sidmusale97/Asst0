@@ -2,10 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
-<<<<<<< HEAD
-//Hello
-=======
->>>>>>> cc96caa30e9db5e943b8a229a971f6989257ed4f
+
 typedef struct wordNode{   //This is a struct to lay out a basic node in the linked list used later in the program to hold all the "words" in the long string
         char * word;        //The data of this node is the word
         struct wordNode * next; //pointer to next node of LL
