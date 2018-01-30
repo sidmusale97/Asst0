@@ -12,7 +12,7 @@ wordNode * insertNode(char* word, wordNode * head);
 wordNode * sort(wordNode * head);
 int numTokens;
 wordNode * nodeAtIndex(int index, wordNode * head);
-int countNonLetters(char * str);
+void makeSpaces(char * str);
 void fillDels(char delims[], char * longString);
 int allUsed(int used[]);
 int main(int argc, char* argv[])
@@ -24,8 +24,9 @@ int main(int argc, char* argv[])
 	}
 	char * longString = argv[1];
     if (strlen(longString) == 0)puts(""); //if empty input string print empty output string
-    char delims[countNonLetters(longString)];   //create char array delims of the same size as the number of non letters in the string
-    fillDels(delims, longString);   //fill the delims array with all nonletters
+    makeSpaces(longString);
+    char delims[1] = " ";   //create char array delims of the same size as the number of non letters in the string
+    //fillDels(delims, longString);   //fill the delims array with all nonletters
     char * token=strtok(longString, delims);    //initiate string tokenizer by setting it equal to the first token in the string
     wordNode * head = NULL; //set first node to null
     numTokens = 0;          //this counts the number of "words" in the string
@@ -117,16 +118,15 @@ wordNode * nodeAtIndex(int index, wordNode * head)//get the node at a certain in
     return NULL;
 }
 
-int countNonLetters(char * longString)
+void makeSpaces(char * longString)
 {
     int charind = 0;
-    int nonLetters = 0;//count all nonletters in the string
+
     while (longString[charind] != '\0')//while the character does not equal the string terminating character
     {
-        if (!isalpha(longString[charind]))nonLetters++;//if non alphabet character found increase nonLetters
+        if (!isalpha(longString[charind]))longString[charind] = ' ';
         charind++;
     }
-    return nonLetters;
 }
 
 void fillDels(char delims[], char * longString)//fill the delimiters array with the nonletters from string
