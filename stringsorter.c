@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
-#Hello
 typedef struct wordNode{   //This is a struct to lay out a basic node in the linked list used later in the program to hold all the "words" in the long string
         char * word;        //The data of this node is the word
         struct wordNode * next; //pointer to next node of LL
@@ -18,13 +17,21 @@ void fillDels(char delims[], char * longString);
 int allUsed(int used[]);
 int main(int argc, char* argv[])
 {
-	if (argc > 2)	//if more than 1 argument then return error
+	if (argc == 1)	//if more than 1 argument then return error
+	{
+		puts("");//if empty input string print empty output string
+		return 0;
+	}
+	else if (argc > 2)
 	{
 		puts("Error too many inputs");
-		return -1;
 	}
 	char * longString = argv[1]; //input string is the second element in argv
-    if (strlen(longString) == 0)puts(""); //if empty input string print empty output string
+	if (strlen(longString) == 0)//if empty input string print empty output string
+	{
+		puts("");
+		return 0;
+	}
     makeSpaces(longString);
     char delims[1] = " ";   //create char array delims with just the space
     char * token=strtok(longString, delims);    //initiate string tokenizer by setting it equal to the first token in the string
